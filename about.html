@@ -1,0 +1,19 @@
+---
+title: About
+heading: About Us
+subtitle: We work with forward thinking clients
+---
+
+<section class="diagonal patterned">
+	<div class="container">
+		<p class="editable">Armlab started out of the creative pool known as Shush.</p>
+	    <p class="editable">Its function is to give a stable framework for activities where pure business meets creativity, while allowing freedom to let creativity blossom.</p>
+		<p class="editable">Armlab covers the scope from infrastructure to code, from administration to image, from procedure to functionality. It’s goal is to weld all these elements together into an inspirational experience.</p>
+	    <p class="editor-link" style="text-align: center;"><a href="cloudcannon:collections/_staff_members/" class="btn"><strong>&#9998;</strong>Manage Staff members</a></p>
+		<ul class="image-grid">
+			{% for member in site.staff_members %}
+				<li>{% include staff-member.html member=member %}</li>
+			{% endfor %}
+		</ul>
+	</div>
+</section>

@@ -1,0 +1,31 @@
+---
+title: Our Services
+heading: Our Services
+subtitle: We craft digital space for amazing clients
+---
+
+<section class="diagonal patterned">
+	<div class="container">
+		<p class="editable" >We offer a wide range of digital services for our clients. We are knowledgeable in every layer of digital presence, and can match our services to your needs.</p>
+	</div>
+</section>
+
+<section class="diagonal alternate">
+	<div class="container">
+		<ul class="image-grid">
+			{% for service in site.services %}
+				<li>
+					<a href="{{ site.baseurl }}{{ service.url }}">
+						<img src="{% include relative-src.html src=service.image_path %}" alt="{{ person.name }}">
+						<div class="details">
+							<div class="name">{{ service.name }}</div>
+							<div class="position">{{ service.subtitle }}</div>
+						</div>
+					</a>
+				</li>
+			{% endfor %}
+			<li class="filler"></li>
+			<li class="filler"></li>
+		</ul>
+	</div>
+</section>
